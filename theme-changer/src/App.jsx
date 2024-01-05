@@ -2,7 +2,7 @@ import ThemeBtn from './components/Themebtn'
 import Card from './components/Card'
 import './App.css'
 import {ThemeProvider} from './context/themeContext'
-import { useEffect, useState } from 'react''react'
+import { useEffect, useState } from 'react'
 
 function App() {
       const [defaultTheme, setDefaultTheme] = useState("light")
@@ -17,9 +17,9 @@ function App() {
 
       useEffect(()=>{
 
-        let style = document.querySelector('html').classList.remove("light", "dark")
+        document.querySelector('html').classList.remove("light", "dark")
         
-        style.classList.add(defaultTheme)
+        document.querySelector('html').classList.add(defaultTheme)
         
 
       },[defaultTheme])

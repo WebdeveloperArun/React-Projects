@@ -8,9 +8,9 @@ export default function ThemeBtn() {
         const checkVal = e.currentTarget.checked
 
         if(checkVal){
-            lightTheme()
-        }else{
             darkTheme()
+        }else{
+            lightTheme()
         }
     }
 
