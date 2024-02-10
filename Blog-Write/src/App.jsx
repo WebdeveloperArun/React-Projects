@@ -5,7 +5,7 @@ import authService from './appwrite/auth'
 import {login, logout} from './store/authslice'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-
+import { Outlet} from 'react-router-dom'
 
 
 function App() {
@@ -26,11 +26,11 @@ function App() {
     } ,[])
 
   return !loading ? (
-    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+    <div className='min-h-screen width-screen flex flex-wrap content-between bg-gray-400'>
       <div className='w-full block'>
         <Header />
           <main>
-            Hallo
+            Todo:<Outlet/>
           </main>
         <Footer />
       </div>
