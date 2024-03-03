@@ -12,9 +12,10 @@ const Signup = () => {
     const navigate = useNavigate()
     const [error, setError] = useState("")
     const dispatch = useDispatch()
-    const {register, hangleSubmit} = useForm()
+    const {register, handleSubmit} = useForm()
 
     const create = async(data) => {
+        console.log(data)
         setError("")
         try {
             const userData = await authService.createAccount(data)
